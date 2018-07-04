@@ -1,0 +1,209 @@
+{
+  "rook_graph_report": {
+    "number_of_nodes": 436,
+    "number_of_edges": 1134,
+    "degree_statistics": {
+      "counts": {
+        "6": 82,
+        "3": 53,
+        "5": 102,
+        "8": 32,
+        "7": 35,
+        "4": 99,
+        "9": 10,
+        "10": 7,
+        "2": 13,
+        "11": 1,
+        "12": 1,
+        "1": 1
+      },
+      "min": 1,
+      "max": 12,
+      "mean": 5.202,
+      "median": 5.0,
+      "variance": 3.118
+    },
+    "connected_components": 1,
+    "units_entirely_contained_in_another": [
+      "1000315-2"
+    ],
+    "number_of_units_entirely_contained_in_another": 1,
+    "eigenvalues_histogram": {
+      "bins": [
+        [
+          0.0,
+          1.123
+        ],
+        [
+          1.123,
+          2.246
+        ],
+        [
+          2.246,
+          3.369
+        ],
+        [
+          3.369,
+          4.491
+        ],
+        [
+          4.491,
+          5.614
+        ],
+        [
+          5.614,
+          6.737
+        ],
+        [
+          6.737,
+          7.86
+        ],
+        [
+          7.86,
+          8.983
+        ],
+        [
+          8.983,
+          10.106
+        ],
+        [
+          10.106,
+          11.229
+        ],
+        [
+          11.229,
+          12.352
+        ],
+        [
+          12.352,
+          13.474
+        ]
+      ],
+      "counts": [
+        36,
+        50,
+        44,
+        49,
+        61,
+        57,
+        59,
+        32,
+        29,
+        11,
+        6,
+        2
+      ]
+    }
+  },
+  "queen_graph_report": {
+    "number_of_nodes": 436,
+    "number_of_edges": 1302,
+    "degree_statistics": {
+      "counts": {
+        "6": 79,
+        "7": 76,
+        "3": 33,
+        "5": 79,
+        "8": 37,
+        "4": 72,
+        "9": 25,
+        "10": 16,
+        "12": 4,
+        "2": 8,
+        "15": 1,
+        "1": 1,
+        "11": 5
+      },
+      "min": 1,
+      "max": 15,
+      "mean": 5.972,
+      "median": 6.0,
+      "variance": 4.303
+    },
+    "connected_components": 1,
+    "units_entirely_contained_in_another": [
+      "1000315-2"
+    ],
+    "number_of_units_entirely_contained_in_another": 1,
+    "eigenvalues_histogram": {
+      "bins": [
+        [
+          0.0,
+          1.253
+        ],
+        [
+          1.253,
+          2.506
+        ],
+        [
+          2.506,
+          3.76
+        ],
+        [
+          3.76,
+          5.013
+        ],
+        [
+          5.013,
+          6.266
+        ],
+        [
+          6.266,
+          7.519
+        ],
+        [
+          7.519,
+          8.773
+        ],
+        [
+          8.773,
+          10.026
+        ],
+        [
+          10.026,
+          11.279
+        ],
+        [
+          11.279,
+          12.532
+        ],
+        [
+          12.532,
+          13.786
+        ],
+        [
+          13.786,
+          15.039
+        ],
+        [
+          15.039,
+          16.292
+        ]
+      ],
+      "counts": [
+        31,
+        45,
+        45,
+        52,
+        59,
+        58,
+        53,
+        46,
+        24,
+        15,
+        6,
+        1,
+        1
+      ]
+    }
+  },
+  "comparison": {
+    "rook_vs_queen_comparison": {
+      "number_of_rook_edges": 1134,
+      "number_of_queen_edges": 1302,
+      "common_edges": 1134,
+      "symmetric_difference": 168,
+      "percent_common": 0.871
+    }
+  }
+}

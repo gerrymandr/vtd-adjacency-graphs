@@ -1,0 +1,174 @@
+{
+  "rook_graph_report": {
+    "number_of_nodes": 327,
+    "number_of_edges": 879,
+    "degree_statistics": {
+      "counts": {
+        "4": 73,
+        "5": 81,
+        "9": 9,
+        "6": 69,
+        "7": 50,
+        "3": 22,
+        "8": 16,
+        "10": 1,
+        "2": 6
+      },
+      "min": 2,
+      "max": 10,
+      "mean": 5.376,
+      "median": 5,
+      "variance": 2.303
+    },
+    "connected_components": 1,
+    "units_entirely_contained_in_another": [],
+    "number_of_units_entirely_contained_in_another": 0,
+    "eigenvalues_histogram": {
+      "bins": [
+        [
+          0.0,
+          1.156
+        ],
+        [
+          1.156,
+          2.312
+        ],
+        [
+          2.312,
+          3.468
+        ],
+        [
+          3.468,
+          4.624
+        ],
+        [
+          4.624,
+          5.781
+        ],
+        [
+          5.781,
+          6.937
+        ],
+        [
+          6.937,
+          8.093
+        ],
+        [
+          8.093,
+          9.249
+        ],
+        [
+          9.249,
+          10.405
+        ],
+        [
+          10.405,
+          11.561
+        ]
+      ],
+      "counts": [
+        28,
+        28,
+        35,
+        36,
+        45,
+        49,
+        45,
+        36,
+        18,
+        7
+      ]
+    }
+  },
+  "queen_graph_report": {
+    "number_of_nodes": 327,
+    "number_of_edges": 925,
+    "degree_statistics": {
+      "counts": {
+        "4": 63,
+        "5": 69,
+        "9": 10,
+        "6": 69,
+        "7": 62,
+        "10": 3,
+        "3": 18,
+        "8": 26,
+        "11": 1,
+        "2": 6
+      },
+      "min": 2,
+      "max": 11,
+      "mean": 5.657,
+      "median": 6,
+      "variance": 2.668
+    },
+    "connected_components": 1,
+    "units_entirely_contained_in_another": [],
+    "number_of_units_entirely_contained_in_another": 0,
+    "eigenvalues_histogram": {
+      "bins": [
+        [
+          0.0,
+          1.258
+        ],
+        [
+          1.258,
+          2.516
+        ],
+        [
+          2.516,
+          3.774
+        ],
+        [
+          3.774,
+          5.032
+        ],
+        [
+          5.032,
+          6.291
+        ],
+        [
+          6.291,
+          7.549
+        ],
+        [
+          7.549,
+          8.807
+        ],
+        [
+          8.807,
+          10.065
+        ],
+        [
+          10.065,
+          11.323
+        ],
+        [
+          11.323,
+          12.581
+        ]
+      ],
+      "counts": [
+        27,
+        31,
+        32,
+        42,
+        49,
+        50,
+        48,
+        30,
+        13,
+        5
+      ]
+    }
+  },
+  "comparison": {
+    "rook_vs_queen_comparison": {
+      "number_of_rook_edges": 879,
+      "number_of_queen_edges": 925,
+      "common_edges": 879,
+      "symmetric_difference": 46,
+      "percent_common": 0.95
+    }
+  }
+}
