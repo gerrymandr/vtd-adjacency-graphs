@@ -51,4 +51,4 @@ graph = networkx.readwrite.json_graph.adjacency_graph(data)
 ## Usage with RunDMCMC
 Our [RunDMCMC](https://github.com/gerrymandr/RunDMCMC) module gives you the power to run a Markov chain on the space of districting plans for a given state. You can use a graph from this repository with RunDMCMC to conduct a local sampling of districting plans.
 
-Once we add (#whats-missing)[some more data] to these graphs, you will have the power to run a Markov chain on one of these graphs using RunDMCMC _without any additional set-up_.
+Once we add [some more data](#whats-missing) to these graphs, you will have the power to run a Markov chain on one of these graphs using RunDMCMC _without any additional set-up_.
