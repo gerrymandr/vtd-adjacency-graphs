@@ -1,0 +1,78 @@
+[
+  [
+    {
+      "column_name": "POP10",
+      "created": "2018-07-07 04:00:56.539460",
+      "graph": "6d5dbb1b",
+      "report": {
+        "histogram": {
+          "bins": [
+            [
+              173315.0,
+              180413.0
+            ],
+            [
+              180413.0,
+              187511.0
+            ],
+            [
+              187511.0,
+              194609.0
+            ]
+          ],
+          "counts": [
+            1,
+            2,
+            1
+          ]
+        },
+        "max": 194609,
+        "mean": 183833.5,
+        "median": 183833.5,
+        "min": 173315,
+        "number_of_rows": 4,
+        "number_of_zeros": 0,
+        "percent_zero": 0.0,
+        "variance": 79711239.0
+      }
+    }
+  ],
+  [
+    {
+      "column_name": "POP10",
+      "created": "2018-07-07 04:00:56.541006",
+      "graph": "17f9aafd",
+      "report": {
+        "histogram": {
+          "bins": [
+            [
+              173315.0,
+              180413.0
+            ],
+            [
+              180413.0,
+              187511.0
+            ],
+            [
+              187511.0,
+              194609.0
+            ]
+          ],
+          "counts": [
+            1,
+            2,
+            1
+          ]
+        },
+        "max": 194609,
+        "mean": 183833.5,
+        "median": 183833.5,
+        "min": 173315,
+        "number_of_rows": 4,
+        "number_of_zeros": 0,
+        "percent_zero": 0.0,
+        "variance": 79711239.0
+      }
+    }
+  ]
+]
