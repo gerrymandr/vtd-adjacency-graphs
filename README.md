@@ -43,17 +43,15 @@ As of now, each graph contains the following data:
 
 The `'boundary_perim'` and `'shared_perim'` lengths are in meters, computed in an appropriate UTM projection. For each state, we chose the UTM zone that contained the majority of the VTDs and computed the lengths in that projection. The code for this process is in the `graphmaker/geospatial.py` module.
 
-#### What's missing?
-
-We do not have VTD or precinct records for Kentucky (FIPS code 21).
-
-#### Rhode Island
-
-Rhode Island did not contribute their VTD shapefiles to the US Census Bureau's 2012 Tiger/Line dataset. Luckily, Rhode Island has a GIS organization that provides [actual precinct shapefiles](http://www.rigis.org/datasets/voting-precincts). We generated the adjacency graphs for Rhode Island from those 2016 precinct shapefiles. For now, the Rhode Island graphs do not have area measurements, but we will compute these soon.
-
-### Source shapefiles
+## Source shapefiles
 
 The source shapefiles used to construct the graphs can be found at [https://www2.census.gov/geo/tiger/TIGER2012/VTD/](https://www2.census.gov/geo/tiger/TIGER2012/VTD/). The [graphmaker](https://github.com/gerrymandr/graphmaker/) package includes a module `get_vtds` with a function `download_state_vtds` that will download and unzip the shapefiles for a given state (specificed by FIPS) for you.
+
+Rhode Island did not contribute their VTD shapefiles to the US Census Bureau's 2012 Tiger/Line dataset. Luckily, Rhode Island has a GIS organization that provides [actual precinct shapefiles](http://www.rigis.org/datasets/voting-precincts). We generated the adjacency graphs for Rhode Island from those 2016 precinct shapefiles.
+
+## What's missing?
+
+We do not have VTD or precinct records for Kentucky (FIPS code 21). For now, the Rhode Island graphs do not have area measurements or population counts, but we will compute these soon.
 
 ## Loading a graph in python
 
