@@ -29,27 +29,29 @@ As of now, each graph contains the following data:
 - **Boundary data**
   - Each node has a `'boundary_node'` attribute that is `True` if the node touches the border of the state, and `False` if it does not. If it does, the node also has a `'boundary_perim'` attribute specifying the length in meters of the boundary shared by the state and VTD corresponding to that node.
   - Each edge has a `'shared_perim'` attribute. This gives the length in meters of the shared boundary of the adjacent VTDs connected by the edge.
+
 - **Information from the Census shapefiles**. Each node has the following attributes:
   - `'COUNTYFP10'`: The FIPS code of the county containing the VTD.
   - `'ALAND10'`: The land area, in square meters, as computed by the US Census Bureau.
   - `'AWATER10'`: The water area, in square meters, as computed by the US Census Bureau.
   - `'NAME10'`: A name for the VTD.
+- **Population**. Each node has a `'POP10'` attribute giving the 2010 Census population of the VTD. We calculated this by summing up the populations of all the Census blocks inside each VTD (according to the [block assignment files](https://www.census.gov/geo/maps-data/data/baf.html)).
+
+- **Districting data**. Each node has a `'CD'` attribute giving its assignment to a congressional district. We used the US Census Bureau [block assignment files](https://www.census.gov/geo/maps-data/data/baf.html) to identify which CD each VTD belonged to. We think these are the districting plans drawn immediately after the 2010 Census, but have not completely verified that this is the case.
 
 #### How we computed lengths
 
 The `'boundary_perim'` and `'shared_perim'` lengths are in meters, computed in an appropriate UTM projection. For each state, we chose the UTM zone that contained the majority of the VTDs and computed the lengths in that projection. The code for this process is in the `graphmaker/geospatial.py` module.
 
-#### What's missing?
-
-We do not have VTD or precinct records for Kentucky (FIPS code 21).
-
-#### Rhode Island
-
-Rhode Island did not contribute their VTD shapefiles to the US Census Bureau's 2012 Tiger/Line dataset. Luckily, Rhode Island has a GIS organization that provides [actual precinct shapefiles](http://www.rigis.org/datasets/voting-precincts). We generated the adjacency graphs for Rhode Island from those 2016 precinct shapefiles. For now, the Rhode Island graphs do not have area measurements, but we will compute these soon.
-
-### Source shapefiles
+## Source shapefiles
 
 The source shapefiles used to construct the graphs can be found at [https://www2.census.gov/geo/tiger/TIGER2012/VTD/](https://www2.census.gov/geo/tiger/TIGER2012/VTD/). The [graphmaker](https://github.com/gerrymandr/graphmaker/) package includes a module `get_vtds` with a function `download_state_vtds` that will download and unzip the shapefiles for a given state (specificed by FIPS) for you.
+
+Rhode Island did not contribute their VTD shapefiles to the US Census Bureau's 2012 Tiger/Line dataset. Luckily, Rhode Island has a GIS organization that provides [actual precinct shapefiles](http://www.rigis.org/datasets/voting-precincts). We generated the adjacency graphs for Rhode Island from those 2016 precinct shapefiles.
+
+## What's missing?
+
+We do not have VTD or precinct records for Kentucky (FIPS code 21). For now, the Rhode Island graphs do not have area measurements or population counts, but we will compute these soon.
 
 ## Loading a graph in python
 
