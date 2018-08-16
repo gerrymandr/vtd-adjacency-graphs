@@ -34,7 +34,8 @@ As of now, each graph contains the following data:
   - `'ALAND10'`: The land area, in square meters, as computed by the US Census Bureau.
   - `'AWATER10'`: The water area, in square meters, as computed by the US Census Bureau.
   - `'NAME10'`: A name for the VTD.
-- **Districting data**. Each node has a `'CD'` attribute giving its assignment to a congressional district. We used the US Census Bureau [block assignment files](https://www.census.gov/geo/maps-data/data/baf.html) to identify which CD each VTD belonged to. We think these districting plans are those in effect _before_ the 2010 redistricting, but have not completely verified that this is the case.
+- **Districting data**. Each node has a `'CD113'` attribute identifying the congressional district that contained that VTD for the districts drawn for the 113th Congress. These were determined by the assignments of the Census blocks contained in the VTD. In cases where not all of the blocks in the VTD were assigned to the same district, the VTD was assigned to the district with the most VTDs. This process is not perfect, and leads to some district graphs being discontiguous when the actual geographic districts are not. We are working on improving this assignment process to avoid such artifacts.
+- **Older districting data**. Each node also has a `'CD'` attribute giving its assignment to a congressional district. We used the US Census Bureau [block assignment files](https://www.census.gov/geo/maps-data/data/baf.html) to identify which CD each VTD belonged to. We think these districting plans are those in effect _before_ the 2010 redistricting, but have not completely verified that this is the case.
 
 #### How we computed lengths
 
