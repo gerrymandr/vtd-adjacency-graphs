@@ -26,6 +26,7 @@ As of now, each graph contains the following data:
 
 - **Identifying data**
   - Nodes are named by their GEOIDs, read from the GEOID10 column in the original shapefile.
+
 - **Boundary data**
   - Each node has a `'boundary_node'` attribute that is `True` if the node touches the border of the state, and `False` if it does not. If it does, the node also has a `'boundary_perim'` attribute specifying the length in meters of the boundary shared by the state and VTD corresponding to that node.
   - Each edge has a `'shared_perim'` attribute. This gives the length in meters of the shared boundary of the adjacent VTDs connected by the edge.
@@ -35,9 +36,12 @@ As of now, each graph contains the following data:
   - `'ALAND10'`: The land area, in square meters, as computed by the US Census Bureau.
   - `'AWATER10'`: The water area, in square meters, as computed by the US Census Bureau.
   - `'NAME10'`: A name for the VTD.
+
 - **Population**. Each node has a `'POP10'` attribute giving the 2010 Census population of the VTD. We calculated this by summing up the populations of all the Census blocks inside each VTD (according to the [block assignment files](https://www.census.gov/geo/maps-data/data/baf.html)).
 
-- **Districting data**. Each node has a `'CD'` attribute giving its assignment to a congressional district. We used the US Census Bureau [block assignment files](https://www.census.gov/geo/maps-data/data/baf.html) to identify which CD each VTD belonged to. We think these are the districting plans drawn immediately after the 2010 Census, but have not completely verified that this is the case.
+- **Districting data**. Each node has a `'CD113'` attribute identifying the congressional district that contained that VTD for the districts drawn for the 113th Congress. These were determined by the assignments of the Census blocks contained in the VTD. In cases where not all of the blocks in the VTD were assigned to the same district, the VTD was assigned to the district with the most VTDs. This process is not perfect, and leads to some district graphs being discontiguous when the actual geographic districts are not. We are working on improving this assignment process to avoid such artifacts.
+
+- **Older districting data**. Each node also has a `'CD'` attribute giving its assignment to a congressional district. We used the US Census Bureau [block assignment files](https://www.census.gov/geo/maps-data/data/baf.html) to identify which CD each VTD belonged to. We think these districting plans are those in effect _before_ the 2010 redistricting, but have not completely verified that this is the case.
 
 #### How we computed lengths
 
